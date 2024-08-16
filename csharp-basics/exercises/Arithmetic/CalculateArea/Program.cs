@@ -43,10 +43,11 @@ namespace CalculateArea
 
         public static void CalculateRectangleArea()
         {
-            decimal length = 0;
-            decimal width = 0;
+            double length = 0;
+            double width = 0;
 
             // Get input from user
+            var input
 
             // Get length
             Console.WriteLine("Enter length? ");
