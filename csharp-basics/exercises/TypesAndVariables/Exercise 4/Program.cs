@@ -6,10 +6,10 @@ namespace Exercise 4
     {
         static void Main(string[] args)
         {
-            string MyName = "Rihards";
-            int MyAge = 1991;
+            string myName = "Rihards";
+            int myAge = 1991;
 
-                Console.WriteLine("My name is" + " " + MyName + " " + "and i was born in" + " " + MyAge + ".");
+                Console.WriteLine("My name is" + " " + myName + " " + "and i was born in" + " " + myAge + ".");
         }
     }
 }
