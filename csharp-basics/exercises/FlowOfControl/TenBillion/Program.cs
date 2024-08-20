@@ -13,8 +13,6 @@ namespace TenBillion
 
             var inputParsed = Math.Abs(input);
 
-
-
             int count = 0;
 
             while (inputParsed > 0)
@@ -22,6 +20,7 @@ namespace TenBillion
                 inputParsed = inputParsed / 10;
                 count++;
             }
+            
             Console.WriteLine(count);
         }
     }
