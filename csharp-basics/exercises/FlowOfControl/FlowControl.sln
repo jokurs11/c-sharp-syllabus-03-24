@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneKeyPad", "PhoneKeyPad\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockPaperScissors", "RockPaperScissors\RockPaperScissors.csproj", "{D106E3DA-7BBA-497E-8AF9-CE2289A02699}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{8C95685D-1A26-4FE3-9B9A-38523675F77B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{D106E3DA-7BBA-497E-8AF9-CE2289A02699}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D106E3DA-7BBA-497E-8AF9-CE2289A02699}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D106E3DA-7BBA-497E-8AF9-CE2289A02699}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C95685D-1A26-4FE3-9B9A-38523675F77B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C95685D-1A26-4FE3-9B9A-38523675F77B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C95685D-1A26-4FE3-9B9A-38523675F77B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C95685D-1A26-4FE3-9B9A-38523675F77B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
