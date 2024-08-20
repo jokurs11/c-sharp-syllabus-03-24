@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace PhoneKeyPad
 {
@@ -7,15 +7,59 @@ namespace PhoneKeyPad
         static void Main(string[] args)
         {
             Console.WriteLine("Enter your letters:");
-            var input = Console.ReadLine();
+            var input = Console.ReadLine().ToLower();
             var result = ConvertTextToNumbers(input);
-            Console.WriteLine(result);
+            var phoneResult = PhoneKeypad(input);
 
+            Console.WriteLine(result);
+            Console.WriteLine(phoneResult);
         }
+
+        static string PhoneKeypad(string num)
+        {
+            var result = "";
+
+            foreach (var character in num)
+            {
+                switch (character)
+                {
+                    case 'a': case 'b': case 'c':
+                        result += "2";
+                        break;
+                    case 'd': case 'e': case 'f':
+                        result += "3";
+                        break;
+                    case 'g': case 'h': case 'i':
+                        result += "4";
+                        break;
+                    case 'j': case 'k': case 'l':
+                        result += "5";
+                        break;
+                    case 'm': case 'n': case 'o':
+                        result += "6";
+                        break;
+                    case 'p': case 'q': case 'r': case 's':
+                        result += "7";
+                        break;
+                    case 't': case 'u': case 'v':
+                        result += "8";
+                        break;
+                    case 'w': case 'x': case 'y': case 'z':
+                        result += "9";
+                        break;
+                    default:
+                        Console.WriteLine("Invalid input");
+                        break;
+                }
+            }
+            return result;
+        }
+
         private static string ConvertTextToNumbers(string text)
         {
             var result = "";
-            foreach (var symbol in text.ToLower())
+
+            foreach (var symbol in text)
             {
                 if (symbol == 'a' || symbol == 'b' || symbol == 'c')
                 {
