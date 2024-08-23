@@ -15,11 +15,13 @@ namespace Exercise2
 
             int[] myArray = new int[maxNumber - minNumber + 1];
             int currentNumber = minNumber;
-            for (int i = 0; i < myArray.Length; i++)
 
+            for (int i = 0; i < myArray.Length; i++)
             {
                 myArray[i] = currentNumber++;
             }
+
+            Console.WriteLine(" ");
             Console.WriteLine(String.Join(", ", myArray));
 
             var sum = 0;
@@ -29,6 +31,7 @@ namespace Exercise2
                 sum += myArray[i];
             }
 
+            Console.WriteLine(" ");
             Console.WriteLine("The sum is " + sum);
         }
     }
