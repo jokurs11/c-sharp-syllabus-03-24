@@ -42,17 +42,30 @@ namespace VideoStore
 
         private static void ListInventory()
         {
-
+            var inventory = _store.ListInvetory()
         }
 
         private static void FillVideoStore()
         {
-
+            _store.AddVideo("The Matrix");
+            _store.AddVideo("Godfather II");
+            _store.AddVideo("Star Wars Episode IV: A new Hope");
         }
 
         private static void RentVideo()
         {
+            Console.WriteLine("enter the name of the video");
+            var title = Console.ReadLine();
+            var video = _store.CheckOut(title);
 
+            if (video = null)
+            {
+                Console.WriteLine($"vide with the {title} was not found");
+            }
+            else
+            {
+                Console.WriteLine($"video with the {title} was found");
+            }
         }
 
         private static void ReturnVideo()
