@@ -64,8 +64,9 @@ namespace CalculateArea
         {
             double length = 0;
             double width = 0;
-
+          
             Console.WriteLine(" ");
+
             Console.WriteLine("Enter length? ");
 
             length = double.Parse(Console.ReadLine());
