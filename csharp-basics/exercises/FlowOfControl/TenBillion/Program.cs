@@ -1,15 +1,27 @@
 ﻿using System;
+using System.Threading;
 
 namespace TenBillion
 {
     class Program
     {
-        //TODO Write a C# program that reads an positive integer (if it is negative, make it positive) and count the number of digits the number (less than ten billion) has.
         static void Main(string[] args)
         {
             Console.WriteLine("Input an integer number less than ten billion: ");
 
-            var input = Console.ReadLine();
+            var input = Convert.ToInt64(Console.ReadLine());
+
+            var inputParsed = Math.Abs(input);
+
+            int count = 0;
+
+            while (inputParsed > 0)
+            {
+                inputParsed = inputParsed / 10;
+                count++;
+            }
+            
+            Console.WriteLine(count);
         }
     }
 }
