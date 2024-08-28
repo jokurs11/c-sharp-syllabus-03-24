@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CalculateArea
 {
@@ -15,12 +11,12 @@ namespace CalculateArea
 
         public static double AreaOfRectangle(double length, double width)
         {
-            return length * width * 2;
+            return length * width;
         }
 
         public static double AreaOfTriangle(double ground, double h)
         {
-            return (ground * h) / 2;
+            return ground * h * 0.5;
         }
     }
 }
