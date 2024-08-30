@@ -1,30 +1,47 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace VideoStore
 {
-    class VideoStore
+    public class VideoStore
     {
-        private List<Video> _inventory;
+        private readonly List<Video> _inventory;
 
+        public VideoStore()
+        {
+            _inventory = new List<Video>();
+        }
         public void AddVideo(string title)
         {
             _inventory.Add(new Video(title));
         }
 
-        public Video Checkout(string title)
+        public Video CheckOut(string title)
         {
             foreach (var video in _inventory)
             {
                 if (video.Title == title)
                 {
                     video.CheckOut();
-
                     return video;
                 }
             }
-
             return null;
         }
+
+        public void Return(string title)
+        {
+            foreach (var video in _inventory)
+            {
+                if (video.Title == title)
+                {
+                    video.Return();
+                    return;
+                }
+            }
+        }
+
 
         public void ReceiveRating(string title, double rating)
         {
@@ -32,25 +49,27 @@ namespace VideoStore
             {
                 if (video.Title == title)
                 {
-                    video.ReceiveRating();
-
+                    video.ReceiveRating(rating);
                     return;
                 }
             }
         }
 
-        public void Return(string title, double rating)
+        public double? AverageRating(string title)
         {
             foreach (var video in _inventory)
             {
                 if (video.Title == title)
                 {
-                    video.Return();
-
-                    return;
+                    return video.AverageRating();
                 }
             }
+            return null;
+        }
+
+        public List<Video> ListInventory()
+        {
+            return _inventory.ToList();
         }
     }
 }
-

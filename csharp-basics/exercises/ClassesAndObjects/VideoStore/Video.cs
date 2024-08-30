@@ -3,15 +3,20 @@ using System.Linq;
 
 namespace VideoStore
 {
-    class Video
+    public class Video
     {
-        public string Title {get; private set; }
-
-    private bool _checkedOut {get; set; }
+        private bool _checkedOut { get; set; }
 
         private List<double> _ratings { get; set; }
 
-        public double AverageRating => _ratings.Average();
+        public Video(string title)
+        {
+            Title = title;
+            _checkedOut = false;
+            _ratings = new List<double>();
+        }
+
+        public string Title { get; private set; }
 
         public void CheckOut()
         {
@@ -23,11 +28,14 @@ namespace VideoStore
             _checkedOut = false;
         }
 
-
-
         public void ReceiveRating(double rating)
         {
             _ratings.Add(rating);
+        }
+
+        public double AverageRating()
+        {
+            return _ratings.Average();
         }
     }
 }
