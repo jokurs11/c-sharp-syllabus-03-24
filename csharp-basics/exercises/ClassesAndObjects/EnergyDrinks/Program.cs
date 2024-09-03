@@ -4,28 +4,27 @@ namespace EnergyDrinks
 {
     class Program
     {
-        private const int NumberedSurveyed = 12467;
-        private const double PurchasedEnergyDrinks = 0.14;
-        private const double PreferCitrusDrinks = 0.64;
+        private const int numberedSurveyed = 12467;
+        private const double purchasedEnergyDrinks = 0.14;
+        private const double preferCitrusDrinks = 0.64;
 
         private static void Main(string[] args)
         {
-            //fixme
-            /*
-             Console.WriteLine("Total number of people surveyed " + NumberedSurveyed);
-             Console.WriteLine("Approximately " + energyDrinkers + " bought at least one energy drink");
-             Console.WriteLine(preferCitrus + " of those " + "prefer citrus flavored energy drinks.");
-             */
+             Console.WriteLine("Total number of people surveyed " + numberedSurveyed);
+             Console.WriteLine($"Approximately {CalculateEnergyDrinkers(numberedSurveyed):0} bought at least one energy drink");
+             Console.WriteLine($"{CalculatePreferCitrus(numberedSurveyed):0} of those prefer citrus flavored energy drinks.");
         }
 
-        double CalculateEnergyDrinkers(int numberSurveyed)
+        private static double CalculateEnergyDrinkers(int numberSurveyed)
         {
-            throw new Exception("Sorry, no code written :(");
+            double energyDrinkers = numberSurveyed * purchasedEnergyDrinks;
+            return energyDrinkers;
         }
 
-        double CalculatePreferCitrus(int numberSurveyed)
+        private static double CalculatePreferCitrus(int numberSurveyed)
         {
-            throw new Exception("Sorry, no code written :(");
+            double preferCitrus = CalculateEnergyDrinkers(numberedSurveyed) * preferCitrusDrinks;
+            return preferCitrus;
         }
     }
 }
