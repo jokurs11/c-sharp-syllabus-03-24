@@ -21,8 +21,6 @@ namespace Exercise1
 
                 switch (n)
                 {
-                    case 0:
-                        return;
                     case 1:
                         Logitech();
                         break;
@@ -103,6 +101,3 @@ namespace Exercise1
         }
     }
 }
-
-
-

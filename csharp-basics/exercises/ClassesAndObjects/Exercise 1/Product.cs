@@ -5,9 +5,9 @@ namespace Exercise1
 {
     class Product
     {
-        public string _item;
-        public double _price;
-        public int _amount;
+        private string _item;
+        private double _price;
+        private int _amount;
 
         public Product(string anItem, double aPrice, int anAmount)
         {

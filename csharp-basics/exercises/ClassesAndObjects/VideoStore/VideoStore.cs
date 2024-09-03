@@ -64,6 +64,7 @@ namespace VideoStore
                     return video.AverageRating();
                 }
             }
+
             return null;
         }
 
