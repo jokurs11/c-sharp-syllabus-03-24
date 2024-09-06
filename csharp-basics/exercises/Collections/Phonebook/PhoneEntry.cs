@@ -2,7 +2,7 @@ namespace PhoneBook
 {
     public class PhoneEntry
     {
-        public string name;
-        public string number;
+        public string name { get; set; }
+        public string number { get; set; }
     }
 }
