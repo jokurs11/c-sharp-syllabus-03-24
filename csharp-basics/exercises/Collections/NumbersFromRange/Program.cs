@@ -16,7 +16,11 @@ namespace NumbersFromRange
                 numbers.Add(random.Next(1, 100));
             }
 
-            //ToDo: Given an array of integers, write a query that returns list of numbers greater than 30 and less than 100.
+            var filteredNumbers = from number in numbers
+                where number > 30 && number < 100
+                select number;
+
+            Console.WriteLine("Filtered List (numbers > 30 and < 100): " + string.Join(", ", filteredNumbers));
         }
     }
 }

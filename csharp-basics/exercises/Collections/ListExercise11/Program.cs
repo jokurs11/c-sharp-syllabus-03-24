@@ -1,22 +1,47 @@
-﻿namespace ListExercise11
+﻿using System;
+using System.Collections.Generic;
+
+namespace ListExercise11
 {
     class Program
     {
         static void Main(string[] args)
         {
-            //TODO: Create an List with string elements
+            List<string> myList = new List<string>();
 
-            //TODO: Add 10 values to list
+            myList.Add("one");
+            myList.Add("two");
+            myList.Add("three");
+            myList.Add("four");
+            myList.Add("five");
+            myList.Add("six");
+            myList.Add("seven");
+            myList.Add("eight");
+            myList.Add("nine");
+            myList.Add("ten");
 
-            //TODO: Add new value at 5th position
+            myList.Insert(4, "another five");
 
-            //TODO: Change value at last position (Calculate last position programmatically)
+            if (myList.Count > 0)
+            {
+                int lastValue = myList.Count - 1;
+                myList[lastValue] = "twelve";
+            }
 
-            //TODO: Sort your list in alphabetical order
+            myList.Sort();
 
-            //TODO: Check if your list contains "Foobar" element
+            for (int i = 0; i < myList.Count; i++)
+            {
+                if (myList[i] == "Foobar")
+                {
+                    Console.WriteLine("List contains foobar");
+                }
+            }
 
-            //TODO: Print each element of list using loop
+            for (int i = 0; i < myList.Count; i++)
+            {
+                Console.WriteLine(myList[i]);
+            }
         }
     }
 }

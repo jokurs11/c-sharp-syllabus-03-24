@@ -1,3 +1,29 @@
-﻿// See https://aka.ms/new-console-template for more information
-//ToDo: Write a query that returns names of days
-//https://docs.microsoft.com/en-us/dotnet/api/system.dayofweek?view=net-6.0
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        var daysOfWeek = new List<string>
+        {
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+        };
+
+        var query = from day in daysOfWeek
+            select day;
+
+        Console.WriteLine("Days of the week:");
+        foreach (var day in query)
+        {
+            Console.WriteLine(day);
+        }
+    }
+}
