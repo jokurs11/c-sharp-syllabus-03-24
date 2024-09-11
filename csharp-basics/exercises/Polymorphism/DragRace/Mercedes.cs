@@ -1,15 +1,18 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace DragRace
 {
-    public class Tesla : Car, Icar
+    public class Mercedes : Car, Icar, Iboost
     {
         private int _currentSpeed ;
 
         public override void SpeedUp()
         {
-            _currentSpeed += 7;
+            _currentSpeed += 9;
         }
+
         public override string ShowCurrentSpeed()
         {
             return _currentSpeed.ToString();
@@ -21,9 +24,14 @@ namespace DragRace
             _currentSpeed -= random.Next(1, 5);
         }
 
-        public override void StartEngine() 
+        public void UseNitrousOxideEngine()
         {
-            Console.WriteLine("-- silence ---");
+            _currentSpeed += 15;
+        }
+
+        public override void StartEngine()
+        {
+            Console.WriteLine("Rrrrrrr.....");
         }
     }
 }

@@ -2,31 +2,31 @@ using System;
 
 namespace DragRace
 {
-    public class Lexus
+    public class Lexus : Car, Icar, Iboost
     {
-        private int _currentSpeed = 0;
-
-        public void SpeedUp() 
+        private int _currentSpeed;
+        public override void SpeedUp()
         {
-            _currentSpeed;
+            _currentSpeed += 8;
         }
 
-        public void SlowDown() 
-        {
-            _currentSpeed;
-        }
-
-        public string ShowCurrentSpeed() 
+        public override string ShowCurrentSpeed() 
         {
             return _currentSpeed.ToString();
         }
 
-        public void UseNitrousOxideEngine() 
+        public override void SlowDown()
         {
-            _currentSpeed;
+            var random = new Random();
+            _currentSpeed -= random.Next(1, 5);
         }
 
-        public void StartEngine() 
+        public void UseNitrousOxideEngine() 
+        {
+            _currentSpeed += 15;
+        }
+
+        public override void StartEngine() 
         {
             Console.WriteLine("Rrrrrrr.....");
         }
