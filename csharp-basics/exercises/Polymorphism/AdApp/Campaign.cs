@@ -7,24 +7,25 @@ namespace AdApp
     {
         private List<Advert> _campaign;
 
-        public Campaign() 
+        public Campaign()
         {
             _campaign = new List<Advert>();
         }
 
-        public void AddAdvert(Advert a) 
+        public void AddAdvert(Advert a)
         {
             _campaign.Add(a);
         }
 
         public int GetCost()
         {
-            return _campaign.Sum(item => item.Cost());
+            return _campaign.Sum(a => a.Cost());
         }
 
         public override string ToString()
         {
-            return "Advert Campaign" + _campaign + "\nTotal Cost = "+ GetCost();
+            return string.Join("\n", _campaign.Select(a => a.ToString())) +
+                   $"\nTotal Cost: {GetCost():C}";
         }
     }
 }
